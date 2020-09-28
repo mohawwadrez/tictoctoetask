@@ -47,3 +47,11 @@
 .game-info {
   margin-left: 20px;
 }
+
+.movesBtn{
+  font-weight: bold;
+  background-color: #1c1f27;
+  color: white;
+  width: 100px;
+  height: 38px;
+}
