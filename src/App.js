@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 
 const Square = (props) => {
   return (
     <button className="square" onClick={props.onClick}>
-      {props.value}
+       {props.value}
     </button>
   );
 };
