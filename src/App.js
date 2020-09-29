@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.scss";
+export const APP_VERSION = process.env.REACT_APP_VERSION;
 
 const Square = (props) => {
   return (
     <button className="square" onClick={props.onClick}>
-       {props.value}
+      {props.value}
     </button>
   );
 };
@@ -133,6 +134,7 @@ const App = () => {
       <header className="App-header">
         <Game />
       </header>
+      <footer>Version: {APP_VERSION}</footer>
     </div>
   );
 };

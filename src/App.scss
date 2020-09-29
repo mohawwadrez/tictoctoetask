@@ -22,12 +22,14 @@
     padding: 0;
     text-align: center;
     width: 100px;
-    color: brown;
+    color: #1c1f27;
   }
   .square:focus {
     outline: none;
   }
   .game {
+    display: flex;
+    flex-direction: row;
     .game-board {
       width: 300px;
     }
@@ -46,5 +48,9 @@
     color: #ddd;
     width: 100px;
     height: 38px;
+  }
+  footer{
+    background-color: #1c1f27;
+    color: #ddd;
   }
 }
