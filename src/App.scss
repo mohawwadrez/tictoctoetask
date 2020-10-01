@@ -12,7 +12,7 @@
   }
   .board-row {
     .square {
-      background: rgba(255, 255, 255, 0);
+      background-color: #ffffff04;
       border-top: none;
       border-right: none;
       border-color: #7272722a;
@@ -26,6 +26,12 @@
       padding: 0;
       text-align: center;
       width: 100px;
+    }
+    .square:hover {
+      -webkit-transition: background-color 0.5s ease;
+      transition: background-color 0.5s ease;
+      background-color: #0d3a42;
+      cursor: pointer;
     }
     .square:nth-child(1) {
       border-left: none;
