@@ -95,7 +95,7 @@ const Game = () => {
   "Winner: " + winner
   :(!current.squares.includes(null) && !winner) ?
   "It's a draw!" :
-  "Next player: " + (state.xIsNext ? "X" : "O");
+  "Next player: " + (this.state.xIsNext ? "X" : "O");
    
   return (
     <div  className="game">
