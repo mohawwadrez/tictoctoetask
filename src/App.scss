@@ -1,39 +1,63 @@
 .App {
   text-align: center;
   .App-header {
-    background-color: #ffffff;
+    background: linear-gradient(#ffffff, rgb(160, 216, 233));
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #1c1f28;
+    color: #0c3e47;
+    font-size: 20px;
   }
-  .square {
-    background: #fff;
-    border: 2px solid #7272723f;
-    float: left;
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 100px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 100px;
-    color: #1c1f27;
+  .board-row {
+    .square {
+      background: rgba(255, 255, 255, 0);
+      border-top: none;
+      border-right: none;
+      border-color: #7272722a;
+      float: left;
+      font-size: 50px;
+      font-weight: bold;
+      line-height: 34px;
+      height: 100px;
+      margin-right: -1px;
+      margin-top: -1px;
+      padding: 0;
+      text-align: center;
+      width: 100px;
+    }
+    .square:nth-child(1) {
+      border-left: none;
+    }
+    .square:focus {
+      outline: none;
+    }
+    [data-btnName="X"] {
+      color: #3989d4;
+    }
+    [data-btnName="O"] {
+      color: #39bcd4;
+    }
   }
-  .square:focus {
-    outline: none;
+  .board-row:nth-child(3) {
+    .square {
+      border-bottom: none;
+    }
   }
   .game {
     display: flex;
     flex-direction: row;
     .game-board {
-      width: 300px;
+      width: 100%;
     }
     .game-info {
+      li {
+        list-style-type: none;
+      }
+      ul{
+        padding: 0;
+      }
       margin-left: 20px;
       .status {
         margin-bottom: 10px;
@@ -42,15 +66,20 @@
   }
   .movesBtn {
     font-weight: bold;
-    background-color: #1c1f27;
+    background-color: #39bcd4;
     border: solid #ddd 1px;
     border-radius: 8px;
     color: #ddd;
     width: 100px;
     height: 38px;
   }
-  footer{
-    background-color: #1c1f27;
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #0d3a42;
     color: #ddd;
   }
 }

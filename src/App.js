@@ -4,7 +4,7 @@ export const APP_VERSION = process.env.REACT_APP_VERSION;
 
 const Square = (props) => {
   return (
-    <button className="square" onClick={props.onClick}>
+    <button data-btnName={props.value} className="square" onClick={props.onClick}>
       {props.value}
     </button>
   );
@@ -58,7 +58,7 @@ const Game = () => {
     }
     squares[i] = xIsNext ? "X" : "O";
     setState((prevState) => ({
-      ...prevState,
+      prevState,
       history: history.concat([
         {
           squares: squares,
@@ -96,7 +96,7 @@ const Game = () => {
     : "Next player: " + (xIsNext ? "X" : "O");
 
   return (
-    <div className="game">
+    <div  className="game">
       <div className="game-board">
         <Board squares={current.squares} onClick={handleClick} />
       </div>
@@ -130,7 +130,7 @@ const calWinner = (squares) => {
 
 const App = () => {
   return (
-    <div className="App">
+    <div  className="App">
       <header className="App-header">
         <Game />
       </header>
