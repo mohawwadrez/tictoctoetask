@@ -13,9 +13,8 @@ installation:
 
 Scripts:
 
-        ///gh page
-        yarn start
-        *npm run deploy to update git-page
+    yarn start
+    *npm run deploy to update git-page
 
 Description:
 
