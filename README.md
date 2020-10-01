@@ -45,6 +45,8 @@ Description:
             ///style 
             css to sass
             new ui 
+            add antd 
+                yarn add antd
 
 Env variables :
 

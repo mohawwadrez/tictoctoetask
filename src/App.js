@@ -1,10 +1,15 @@
 import React from "react";
+import { Col, Row } from "antd";
 import "./App.scss";
 export const APP_VERSION = process.env.REACT_APP_VERSION;
 
 const Square = (props) => {
   return (
-    <button data-btnName={props.value} className="square" onClick={props.onClick}>
+    <button
+      data-btnName={props.value}
+      className="square"
+      onClick={props.onClick}
+    >
       {props.value}
     </button>
   );
@@ -91,20 +96,19 @@ const Game = () => {
     );
   });
 
-  const status = winner ?
-  "Winner: " + winner
-  :(!current.squares.includes(null) && !winner) ?
-  "It's a draw!" :
-  "Next player: " + (this.state.xIsNext ? "X" : "O");
-   
+  const status = winner
+    ? "Winner : " + winner
+    : !current.squares.includes(null) && !winner
+    ? "Game Draw"
+    : "Next player : " + (state.xIsNext ? "X" : "O");
+
   return (
-    <div  className="game">
+    <div className="game">
       <div className="game-board">
         <Board squares={current.squares} onClick={handleClick} />
       </div>
       <div className="game-info">
-        <div>{status}</div>
-        <ul>{moves}</ul>
+        <div className="status">{status}</div>
       </div>
     </div>
   );
@@ -132,7 +136,7 @@ const calWinner = (squares) => {
 
 const App = () => {
   return (
-    <div  className="App">
+    <div className="App">
       <header className="App-header">
         <Game />
       </header>
