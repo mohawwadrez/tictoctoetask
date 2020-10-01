@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/tictoctoetask/static/css/main.818d90d5.chunk.css",
-    "main.js": "/tictoctoetask/static/js/main.76e3b499.chunk.js",
+    "main.css": "/tictoctoetask/static/css/main.78b7f59a.chunk.css",
+    "main.js": "/tictoctoetask/static/js/main.9589da6d.chunk.js",
     "runtime-main.js": "/tictoctoetask/static/js/runtime-main.a955999c.js",
-    "static/js/2.f412621a.chunk.js": "/tictoctoetask/static/js/2.f412621a.chunk.js",
+    "static/js/2.c039b977.chunk.js": "/tictoctoetask/static/js/2.c039b977.chunk.js",
     "index.html": "/tictoctoetask/index.html",
-    "precache-manifest.06ab2c9a52e62d9aa7e1be82b2b516b3.js": "/tictoctoetask/precache-manifest.06ab2c9a52e62d9aa7e1be82b2b516b3.js",
+    "precache-manifest.651f8609e3ab67122f952a7a2160ba3a.js": "/tictoctoetask/precache-manifest.651f8609e3ab67122f952a7a2160ba3a.js",
     "service-worker.js": "/tictoctoetask/service-worker.js",
-    "static/js/2.f412621a.chunk.js.LICENSE.txt": "/tictoctoetask/static/js/2.f412621a.chunk.js.LICENSE.txt"
+    "static/js/2.c039b977.chunk.js.LICENSE.txt": "/tictoctoetask/static/js/2.c039b977.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a955999c.js",
-    "static/js/2.f412621a.chunk.js",
-    "static/css/main.818d90d5.chunk.css",
-    "static/js/main.76e3b499.chunk.js"
+    "static/js/2.c039b977.chunk.js",
+    "static/css/main.78b7f59a.chunk.css",
+    "static/js/main.9589da6d.chunk.js"
   ]
 }
