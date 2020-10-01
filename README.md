@@ -1,14 +1,18 @@
 Tic-Tac-Toe game
+
     Taken from react site training ("https://reactjs.org/tutorial/tutorial.html")
 
 Demo:
+
     "https://mohawwadrez.github.io/tictoctoetask/"
 
 installation:
+
     create repo and clone it
     npx create-react-app tictoctoe
 
 Scripts:
+
     yarn start
     *npm run deploy to update git-page
 
