@@ -91,10 +91,12 @@ const Game = () => {
     );
   });
 
-  const status = winner
-    ? "Winner: " + winner
-    : "Next player: " + (xIsNext ? "X" : "O");
-
+  const status = winner ?
+  "Winner: " + winner
+  :(!current.squares.includes(null) && !winner) ?
+  "It's a draw!" :
+  "Next player: " + (state.xIsNext ? "X" : "O");
+   
   return (
     <div  className="game">
       <div className="game-board">
