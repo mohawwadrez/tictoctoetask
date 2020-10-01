@@ -1,10 +1,8 @@
 Tic-Tac-Toe game
 
-    Taken from react site training ("https://reactjs.org/tutorial/tutorial.html")
+Taken from react site training ("https://reactjs.org/tutorial/tutorial.html")
 
-Demo:
-
-    "https://mohawwadrez.github.io/tictoctoetask/"
+Demo:"https://mohawwadrez.github.io/tictoctoetask/"
 
 installation:
 
