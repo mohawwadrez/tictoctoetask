@@ -104,6 +104,9 @@ const Game = () => {
 
   return (
     <div className="game">
+      <div className="game-info">
+        <div className="status"></div>
+      </div>
       <div className="game-board">
         <Board squares={current.squares} onClick={handleClick} />
       </div>
