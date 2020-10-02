@@ -89,7 +89,13 @@ const Game = () => {
     const desc = move ? "Go to move " + move : "Start Again";
     return (
       <li key={move}>
-        <button className="movesBtn" onClick={() => jumpTo(move)}>
+        <button
+          className="movesBtn"
+          onClick={() => {
+            setisShow(false);
+            jumpTo(move);
+          }}
+        >
           {desc}
         </button>
       </li>
