@@ -80,22 +80,45 @@
         padding: 0;
       }
       .status {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
       }
       button {
-        font-size: 1rem;
-        color: #314e53;
-        background-color: #39bcd4;
-        border-radius: 50px;
-        width: 100%;
+        
+        color: #a4b5b8;
+        background-color: #fff;
+        width: 50px;
         height: 50px;
+        border-radius: 50%;
+        padding: 10px;
         border: 1px solid rgba(164, 181, 184, 0.4);
-     
+        position: relative;
+        cursor: pointer;
+        transition: border 0.2s ease-in-out;
+        svg {
+          position: relative;
+        }
+        &::before {
+          outline: none;
+          content: "";
+          position: absolute;
+          background-color: #a4b5b8;
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          top: 3px;
+          left: 3px;
+          transition: background 0.2s ease-in-out;
+        }
+        &:hover,
+        &:focus {
+          border-color: rgba(39, 125, 180, 0.4);
+          &::before {
+            background-color: #277db4;
+          }
+        }
       }
       button:hover {
-       outline: none;
-        color: #39bcd4;
-        background-color: #314e53;
+        outline: none;
       }
     }
   }
@@ -131,6 +154,7 @@
     border: 1px solid #79cadc;
   }
   .history {
+    z-index: 1;
     padding: 40px 30px;
     height: 80%;
     width: 70%;
