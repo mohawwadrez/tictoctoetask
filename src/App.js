@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "antd";
+import Icon from './icon';
 import "./App.scss";
 export const APP_VERSION = process.env.REACT_APP_VERSION;
 
@@ -127,7 +128,7 @@ const Game = () => {
       <div className="game-info">
         <div className="status">{status}</div>
         <button className="historybtn" onClick={() => setisShow(true)}>
-          History
+        <Icon className="hisico"></Icon>
         </button>
       </div>
     </div>
