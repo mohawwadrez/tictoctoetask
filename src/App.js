@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Row } from "antd";
 import "./App.scss";
 export const APP_VERSION = process.env.REACT_APP_VERSION;
@@ -53,7 +53,7 @@ const intialState = {
 const Game = () => {
   const [state, setState] = React.useState(intialState);
   const { history, stepNumber, xIsNext } = state;
-
+  const [isShow, setisShow] = useState(false);
   const handleClick = (i) => {
     const history = state.history.slice(0, stepNumber + 1);
     const current = history[history.length - 1];
@@ -104,6 +104,14 @@ const Game = () => {
 
   return (
     <div className="game">
+      {isShow ? (
+        <div className="history">
+          <button className="close" onClick={() => setisShow(false)}>
+            Close History
+          </button>
+          {moves}
+        </div>
+      ) : null}
       <div className="game-info">
         <div className="status"></div>
       </div>
@@ -112,6 +120,9 @@ const Game = () => {
       </div>
       <div className="game-info">
         <div className="status">{status}</div>
+        <button className="historybtn" onClick={() => setisShow(true)}>
+          History
+        </button>
       </div>
     </div>
   );
