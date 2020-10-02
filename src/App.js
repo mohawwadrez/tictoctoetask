@@ -109,6 +109,16 @@ const Game = () => {
     : !current.squares.includes(null) && !winner
     ? "Game Draw"
     : "Next player : " + (state.xIsNext ? "X" : "O");
+  
+  const refreshPage =() => {
+    window.location.reload(false);
+  }
+  const statusrefresh = winner
+    ? "Winner : " + refreshPage()
+    : !current.squares.includes(null) && !winner
+    ? "Game Draw" + refreshPage()
+    : "Next player : " + (state.xIsNext ? "X" : "O");
+  console.log(statusrefresh);
 
   const [x, setx] = useState(localStorage.getItem("x"));
   const [o, seto] = useState(localStorage.getItem("o"));
@@ -226,10 +236,8 @@ const App = () => {
         <Game />
       </header>
       <footer>
-        <div>
-        Version: {APP_VERSION}
-        </div>
-        </footer>
+        <div>Version: {APP_VERSION}</div>
+      </footer>
     </div>
   );
 };
