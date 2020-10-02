@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "antd";
-import Icon from './icon';
+import Icon from "./assets/icon";
+import Reset from "./assets/reset";
 import "./App.scss";
 export const APP_VERSION = process.env.REACT_APP_VERSION;
 
@@ -109,6 +110,54 @@ const Game = () => {
     ? "Game Draw"
     : "Next player : " + (state.xIsNext ? "X" : "O");
 
+  const [x, setx] = useState(localStorage.getItem("x"));
+  const [o, seto] = useState(localStorage.getItem("o"));
+  useEffect(() => {
+    if (winner === "X") {
+      localStorage.setItem(
+        "x",
+        localStorage.getItem("x") === undefined
+          ? 1
+          : Number(localStorage.getItem("x")) + 1
+      );
+      seto(
+        localStorage.getItem("x") === undefined
+          ? 1
+          : Number(localStorage.getItem("x"))
+      );
+    }
+  }, [winner]);
+  useEffect(() => {}, [o]);
+  useEffect(() => {}, [x]);
+  useEffect(() => {
+    if (winner === "O") {
+      localStorage.setItem(
+        "o",
+        localStorage.getItem("o") === undefined
+          ? 1
+          : Number(localStorage.getItem("o")) + 1
+      );
+      seto(
+        localStorage.getItem("o") === undefined
+          ? 1
+          : Number(localStorage.getItem("o"))
+      );
+    }
+  }, [winner]);
+  const deleteitem = () => {
+    localStorage.removeItem("x");
+    localStorage.removeItem("o");
+    setx(0);
+    seto(0);
+  };
+
+  useEffect(() => {
+    setx(localStorage.getItem("x"));
+  }, [x]);
+  useEffect(() => {
+    seto(localStorage.getItem("o"));
+  }, [o]);
+
   return (
     <div className="game">
       {isShow ? (
@@ -119,16 +168,31 @@ const Game = () => {
           {moves}
         </div>
       ) : null}
-      <div className="game-info">
-        <div className="status"></div>
+
+      <div className="win-status">
+        <div className="x">
+          X <br></br>
+          <div className="text-win-x">{x} win</div>
+        </div>
+        <div className="o">
+          O <br></br>
+          <div className="text-win-o">{o} win</div>
+        </div>
       </div>
+
       <div className="game-board">
         <Board squares={current.squares} onClick={handleClick} />
       </div>
-      <div className="game-info">
+      <div className="winner">
         <div className="status">{status}</div>
-        <button className="historybtn" onClick={() => setisShow(true)}>
-        <Icon className="hisico"></Icon>
+      </div>
+
+      <div className="game-info">
+        <button onClick={() => setisShow(true)}>
+          <Icon></Icon>
+        </button>
+        <button onClick={() => deleteitem()}>
+          <Reset></Reset>
         </button>
       </div>
     </div>
@@ -161,7 +225,11 @@ const App = () => {
       <header className="App-header">
         <Game />
       </header>
-      <footer>Version: {APP_VERSION}</footer>
+      <footer>
+        <div>
+        Version: {APP_VERSION}
+        </div>
+        </footer>
     </div>
   );
 };
