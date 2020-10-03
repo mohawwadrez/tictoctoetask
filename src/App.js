@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import packageJson from "../package.json";
 import { Col, Row } from "antd";
 import Icon from "./assets/icon";
 import Reset from "./assets/reset";
 import "./App.scss";
-export const APP_VERSION = process.env.REACT_APP_VERSION;
 
 const Square = (props) => {
   return (
@@ -109,10 +109,10 @@ const Game = () => {
     : !current.squares.includes(null) && !winner
     ? "Game Draw"
     : "Next player : " + (state.xIsNext ? "X" : "O");
-  
-  const refreshPage =() => {
+
+  const refreshPage = () => {
     window.location.reload(false);
-  }
+  };
   const statusrefresh = winner
     ? "Winner : " + refreshPage()
     : !current.squares.includes(null) && !winner
@@ -228,7 +228,7 @@ const calWinner = (squares) => {
   }
   return null;
 };
-
+console.log(packageJson.version); // "1.0.0"
 const App = () => {
   return (
     <div className="App">
@@ -236,7 +236,7 @@ const App = () => {
         <Game />
       </header>
       <footer>
-        <div>Version: {APP_VERSION}</div>
+        <div>Version:{packageJson.version}</div>
       </footer>
     </div>
   );
