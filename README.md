@@ -20,7 +20,7 @@ Taken from react site tutorial ("https://reactjs.org/tutorial/tutorial.html")
     git push -u origin master
 
 to create pages in on github: `npm install gh-pages --save-dev`
-go to package.json and add
+go to package.json and add :
 
     "homepage": "https://mohawwadrez.github.io/tictoctoetask",
     to script:
