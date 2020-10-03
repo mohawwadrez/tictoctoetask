@@ -4,19 +4,19 @@ Taken from react site tutorial ("https://reactjs.org/tutorial/tutorial.html")
 
 ## Demo
 
-`https://mohawwadrez.github.io/tictoctoetask/`
+("https://mohawwadrez.github.io/tictoctoetask/")
 
 ## installation:
 
 `create repo in github`
 `npx create-react-app tictoctoe`
-`publish project on git`
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M master
-git remote add origin https://github.com/mohawwadrez/tictoctoe.git
-git push -u origin master
+`publish project on git`:
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M master
+    git remote add origin https://github.com/mohawwadrez/tictoctoe.git
+    git push -u origin master
 `npm install gh-pages --save-dev` to create pages in on github
 go to package.json and add
 "homepage": "https://mohawwadrez.github.io/tictoctoetask",
