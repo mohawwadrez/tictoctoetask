@@ -19,29 +19,29 @@ Taken from react site tutorial ("https://reactjs.org/tutorial/tutorial.html")
     git remote add origin https://github.com/mohawwadrez/tictoctoe.git
     git push -u origin master
     
-`npm install gh-pages --save-dev` to create pages in on github
-go to package.json and add
-"homepage": "https://mohawwadrez.github.io/tictoctoetask",
-to script:
+`npm install gh-pages --save-dev` to create pages in on github:
+    go to package.json and add
+## "homepage": "https://mohawwadrez.github.io/tictoctoetask",
+    to script:
 
-    "predeploy": "npm run build"
-    "deploy": "gh-pages -d build"
+        "predeploy": "npm run build"
+        "deploy": "gh-pages -d build"
 
-finally `npm run deploy`
+    finally npm run deploy 
 
 ## Scripts:
 
-`yarn start`
+`yarn start` <br></br>
 `npm run deploy` to update git-page
 
-## New changes to react site tutorial
+## New changes 
 
-`all class component to functional component`
-` all function componet to arrow component`
-`add Draw option`
-` Option to count the number of wins`
+` 1 all class component to functional component`
+` 2 all function componet to arrow component`
+` 3 add Draw option`
+` 4 Option to count the number of wins`
+` 5 css to sass`
+` 6 new ui desgin`
 
-## style
 
-`css to sass`
-`new ui desgin`
+
