@@ -19,9 +19,11 @@ Taken from react site tutorial ("https://reactjs.org/tutorial/tutorial.html")
     git remote add origin https://github.com/mohawwadrez/tictoctoe.git
     git push -u origin master
     
-`npm install gh-pages --save-dev` to create pages in on github:
+`npm install gh-pages --save-dev` 
+to create pages in on github:
+
     go to package.json and add
-## "homepage": "https://mohawwadrez.github.io/tictoctoetask",
+    "homepage": "https://mohawwadrez.github.io/tictoctoetask",
     to script:
 
         "predeploy": "npm run build"
