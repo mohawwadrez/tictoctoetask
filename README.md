@@ -22,9 +22,11 @@ Taken from react site tutorial ("https://reactjs.org/tutorial/tutorial.html")
 `npm install gh-pages --save-dev` to create pages in on github
 go to package.json and add
 "homepage": "https://mohawwadrez.github.io/tictoctoetask",
-to script
-"predeploy": "npm run build",
-"deploy": "gh-pages -d build",
+to script:
+
+    "predeploy": "npm run build"
+    "deploy": "gh-pages -d build"
+
 finally `npm run deploy`
 
 ## Scripts:
