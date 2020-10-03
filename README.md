@@ -38,12 +38,12 @@ go to package.json and add
 
 ## New changes 
 
- 1 all class component to functional component
- 2 all function componet to arrow component
- 3 add Draw option
- 4 Option to count the number of wins
- 5 css to sass
- 6 new ui desgin
+ 1 all class component to functional component <br></br>
+ 2 all function componet to arrow component <br></br>
+ 3 add Draw option <br></br>
+ 4 Option to count the number of wins <br></br>
+ 5 css to sass <br></br>
+ 6 new ui desgin 
 
 
 
