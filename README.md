@@ -39,7 +39,6 @@ go to package.json and add
 
 1- all class component to functional component
 <br>2- all function componet to arrow component</br>
-<br>3- add Draw option </br>
-<br>4- Option to count the number of wins</br>
-<br>5- css to sass </br>
-<br>6- new ui desgin</br>
+3- add Draw option <br>4- Option to count the number of wins</br>
+5- css to sass <br>6- new ui desgin</br>
+
