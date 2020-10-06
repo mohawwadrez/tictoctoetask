@@ -113,12 +113,6 @@ const Game = () => {
   const refreshPage = () => {
     window.location.reload(false);
   };
-  const statusrefresh = winner
-    ? "Winner : " + refreshPage()
-    : !current.squares.includes(null) && !winner
-    ? "Game Draw" + refreshPage()
-    : "Next player : " + (state.xIsNext ? "X" : "O");
-  console.log(statusrefresh);
 
   const [x, setx] = useState(localStorage.getItem("x"));
   const [o, seto] = useState(localStorage.getItem("o"));
@@ -137,8 +131,8 @@ const Game = () => {
       );
     }
   }, [winner]);
-  useEffect(() => {}, [o]);
   useEffect(() => {}, [x]);
+  useEffect(() => {}, [o]);
   useEffect(() => {
     if (winner === "O") {
       localStorage.setItem(
@@ -154,9 +148,10 @@ const Game = () => {
       );
     }
   }, [winner]);
+
   const deleteitem = () => {
-    localStorage.removeItem("x");
-    localStorage.removeItem("o");
+    localStorage.setItem("x", 0);
+    localStorage.setItem("o", 0);
     setx(0);
     seto(0);
   };
@@ -198,10 +193,13 @@ const Game = () => {
       </div>
 
       <div className="game-info">
-        <button onClick={() => setisShow(true)}>
+        <button className="history" onClick={() => setisShow(true)}>
           <Icon></Icon>
         </button>
-        <button onClick={() => deleteitem()}>
+        <button className="start-again" onClick={() => refreshPage()}>
+          <div>Play again</div>
+        </button>
+        <button className="game-reset" onClick={() => deleteitem()}>
           <Reset></Reset>
         </button>
       </div>
@@ -235,9 +233,9 @@ const App = () => {
       <header className="App-header">
         <Game />
       </header>
-      <footer>
+      <div className="App-footer">
         <div>Version:{packageJson.version}</div>
-      </footer>
+      </div>
     </div>
   );
 };
