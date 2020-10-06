@@ -90,10 +90,10 @@
         justify-content: center;
       }
       .winner {
-        padding-top: 5px;
-        font-size: 1rem;
+        padding-top: 30px;
+        font-size: 1.3rem;
         font-weight: bolder;
-        color: #314e53;
+        color: #236d7a;
       }
       .game-info {
         padding: 20px;
@@ -225,8 +225,42 @@
             }
           }
         }
+        .game-history {
+          color: #a4b5b8;
+          background-color: #fff;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          padding: 10px;
+          border: 1px solid rgba(164, 181, 184, 0.4);
+          position: relative;
+          cursor: pointer;
+          transition: border 0.2s ease-in-out;
+          svg {
+            position: relative;
+          }
+          &::before {
+            outline: none;
+            content: "";
+            position: absolute;
+            background-color: #a4b5b8;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+            transition: background 0.2s ease-in-out;
+          }
+          &:hover,
+          &:focus {
+            border-color: rgba(39, 125, 180, 0.4);
+            &::before {
+              background-color: #277db4;
+            }
+          }
+        }
 
-        .history:hover {
+        .game-history:hover {
           outline: none;
         }
 

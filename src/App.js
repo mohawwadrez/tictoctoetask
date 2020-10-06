@@ -116,7 +116,9 @@ const Game = () => {
 
   const [x, setx] = useState(localStorage.getItem("x"));
   const [o, seto] = useState(localStorage.getItem("o"));
+
   useEffect(() => {
+  
     if (winner === "X") {
       localStorage.setItem(
         "x",
@@ -134,6 +136,7 @@ const Game = () => {
   useEffect(() => {}, [x]);
   useEffect(() => {}, [o]);
   useEffect(() => {
+  
     if (winner === "O") {
       localStorage.setItem(
         "o",
@@ -193,7 +196,7 @@ const Game = () => {
       </div>
 
       <div className="game-info">
-        <button className="history" onClick={() => setisShow(true)}>
+        <button className="game-history" onClick={() => setisShow(true)}>
           <Icon></Icon>
         </button>
         <button className="start-again" onClick={() => refreshPage()}>
